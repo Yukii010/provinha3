@@ -1,14 +1,11 @@
 numeros = []
-numero = int(input("Digite um número inteiro (ou 0 para sair): "))
-
-while numero != 0:
+while (numero := int(input("Digite um número inteiro (ou 0 para sair): "))) != 0:
     numeros.append(numero)
-    numero = int(input("Digite um número inteiro (ou 0 para sair): "))
 
 quantidade = len(numeros)
 soma = sum(numeros)
-media = soma / quantidade
+media = soma / quantidade if quantidade > 0 else 0
 
-print("Quantidade de números digitados:", quantidade)
-print("Soma dos números digitados:", soma)
-print("Média aritmética dos números digitados:", media)
+print(f"Quantidade de números digitados: {quantidade}")
+print(f"Soma dos números digitados: {soma}")
+print(f"Média aritmética dos números digitados: {media}")
